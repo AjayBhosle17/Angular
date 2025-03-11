@@ -1,0 +1,37 @@
+<h2>binding Component!</h2>
+
+
+<div>
+    <span>Bind model Data=> InterPolation Binding <br></span>
+    Your Name is : {{name}}
+   
+</div>
+<br>
+<div>
+    <span>Bind model Data=> Property Binding <br></span>
+    <!-- <input type="button" value="{{name}}"/> -->
+    <input type="button" [value]="name"/>
+
+</div>
+<br>
+<div>
+    <span>Bind model Data=> Event Binding <br></span>
+    
+    <input type="button" value="click me" (click)="print()">
+
+</div>
+
+<br>
+<div>
+    <span>Bind model Data=>Two Way Binding <br></span>
+    
+    <input type="text" [(ngModel)]="name"/>
+
+ 
+
+</div>
+
+<div>
+    <input type="button" value="click me" (click)="greet()">
+    <p>{{name1}}</p>
+</div>
