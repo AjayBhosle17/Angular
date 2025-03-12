@@ -10,6 +10,8 @@ export class BindingComponent {
 
     name:string="Ajay Bhosle";
     name1:string="";
+    hiddenfield=true;
+
 
     print(){
       this.name="Vijay Bhosle";

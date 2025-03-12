@@ -7,6 +7,8 @@ import { SecondComponent } from './second/second.component';
 import { ThirdComponent } from './third/third.component';
 import { BindingComponent } from './binding/binding.component';
 import { FormsModule } from '@angular/forms';
+import { CompareComponent } from './compare/compare.component';
+import { DirectiveComponent } from './directive/directive.component';
 
 @NgModule({
   declarations: [
@@ -14,12 +16,14 @@ import { FormsModule } from '@angular/forms';
     FirstComponent,
     SecondComponent,
     ThirdComponent,
-    BindingComponent
+    BindingComponent,
+    CompareComponent,
+    DirectiveComponent
   ],
   imports: [
     BrowserModule,FormsModule
   ],
   providers: [],
-  bootstrap: [BindingComponent,AppComponent,SecondComponent]
+  bootstrap: [DirectiveComponent,BindingComponent,AppComponent,SecondComponent]
 })
 export class AppModule { }

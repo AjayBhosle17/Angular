@@ -1,0 +1,32 @@
+p{
+    background-color: darkseagreen;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 5px;
+
+}
+div{
+    margin-top: 5px;
+}
+.attributedir{
+
+    background-color: darkgoldenrod;
+    text-align: center;
+}
+.attributedir span{
+    background-color:hotpink;
+    text-align: center;   
+}
+
+body{
+    text-align: center;
+}
+
+.important{
+
+    background-color: yellow;
+}
+
+.veryImp{
+    color:blueviolet;
+}

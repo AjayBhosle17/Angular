@@ -1,0 +1,15 @@
+<div>
+    <p>compare Component interpolation & property</p>
+
+    <span>interpolation</span>
+    <input type="button" value="{{title}}" disabled="{{isdisabled}}"/>
+
+    
+    <span>property</span> 
+    <input type="button" [value]="title" [disabled]="isdisabled"/>
+
+     
+    Enter Text: <input type="text" [(ngModel)]="FullName"/>
+   <p>FullName: {{FullName}}</p>
+
+</div>

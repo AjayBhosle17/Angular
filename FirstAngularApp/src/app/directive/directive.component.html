@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="attributedir">
+        <p>Directive</p>
+        <h4>Attribute Directive ngModel: <span>{{Name}}</span></h4>
+        Enter Data: <input type="text" [(ngModel)]="Name"/>
+       
+    </div>
+
+    <!-- <h3  [style.color]="color">Property Binding Syntax:-  </h3> -->
+
+    <h4 style="font-size: 20px;">Using ng style Attribute</h4>
+    <h3 [ngStyle]="headingStyle">Setting Style Using ng style</h3>
+
+    <h3 [class.important]="important"  [class.veryImp]="important" >Using class Attribute</h3>
+    <h3 [ngClass]="myclass">Using ngclass Attribute</h3>
+
+    <p>Structural Directive</p>
+
+    <div style="height: 100px; width: 200px; background-color: rgb(59, 113, 66); right: 20px;">
+       <p  *ngIf="visible">First Paragraph</p>
+    </div>
+    <div style="height: 100px; width: 200px; background-color: rgb(59, 113, 66); right: 20px;">
+        <p  *ngIf="visible;else second">First Paragraph</p>
+            <ng-template #second>
+                <p>second Paragraph</p>
+            </ng-template>
+     </div>
+
+</body>
+</html>
