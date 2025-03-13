@@ -7,7 +7,7 @@
 </head>
 <body>
 
-    <div class="attributedir">
+    <div class="attributedir" highlight>
         <p>Directive</p>
         <h4>Attribute Directive ngModel: <span>{{Name}}</span></h4>
         Enter Data: <input type="text" [(ngModel)]="Name"/>
@@ -23,7 +23,8 @@
     <h3 [ngClass]="myclass">Using ngclass Attribute</h3>
 
     <p>Structural Directive</p>
-
+    
+    <h2>NG If</h2>
     <div style="height: 100px; width: 200px; background-color: rgb(59, 113, 66); right: 20px;">
        <p  *ngIf="visible">First Paragraph</p>
     </div>
@@ -34,5 +35,53 @@
             </ng-template>
      </div>
 
+    <h2>NG For</h2>
+
+    <ul>
+        <li style="list-style: none;" *ngFor="let name of names">{{name}}</li>
+    </ul>
+
+
+        Select Your Name : 
+        <select [(ngModel)]="searchName">
+           
+            <option value="-">Select Name</option>
+            <option *ngFor="let name of names">{{name}}</option>
+
+        </select>
+
+        <p>search name is : {{searchName}}</p>
+
+        <h2>NG Switch</h2>
+
+        <div [ngSwitch]="searchName">
+            <p *ngSwitchCase="'AB'">Ajay Bhosle</p>
+            <p *ngSwitchCase="'OB'">Om Bhosle</p>
+            <p *ngSwitchCase="'MB'">Madhuri Bhosle</p>
+            <p *ngSwitchCase="'VB'">Vijay Bhosle</p>
+            <p *ngSwitchDefault>No Name Here</p>
+
+
+        </div>
+
+
+        <p>Student Info</p>
+        <table border="1">
+            <thead>
+                <th>RollNo</th>
+                <th>Name</th>
+                <th>City</th>
+
+            </thead>
+
+            <tbody>
+                <tr *ngFor="let info of students">
+                    <td>{{info.rollNO}}</td>
+                    <td>{{info.Name}}</td>
+                    <td>{{info.city}}</td>
+
+                </tr>
+            </tbody>
+        </table>
 </body>
 </html>

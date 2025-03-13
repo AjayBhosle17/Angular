@@ -9,6 +9,7 @@ import { BindingComponent } from './binding/binding.component';
 import { FormsModule } from '@angular/forms';
 import { CompareComponent } from './compare/compare.component';
 import { DirectiveComponent } from './directive/directive.component';
+import { HighlightDirective } from './directive/highlight.directive';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,9 @@ import { DirectiveComponent } from './directive/directive.component';
     ThirdComponent,
     BindingComponent,
     CompareComponent,
-    DirectiveComponent
+    DirectiveComponent,
+    HighlightDirective,
+   
   ],
   imports: [
     BrowserModule,FormsModule

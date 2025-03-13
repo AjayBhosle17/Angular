@@ -26,5 +26,33 @@ export class DirectiveComponent {
 
   visible=false;
 
+  names:string[]=["AB","VB","OB","MB"];
+  searchName:string|undefined;
+
+  students=[
+    {
+      rollNO:1,
+      Name:"Ajay",
+      city:"Ambajogai"
+    }, {
+      rollNO:2,
+      Name:"Vijay",
+      city:"Ambajogai"
+    }, {
+      rollNO:3,
+      Name:"Om",
+      city:"Ambajogai"
+    },
+    {
+      rollNO:4,
+      Name:"Madhuri",
+      city:"Ambajogai"
+    },
+    {
+      rollNO:5,
+      Name:"VAishnavi",
+      city:"Ambajogai"
+    }
+  ]
 }
 
