@@ -10,6 +10,10 @@ import { FormsModule } from '@angular/forms';
 import { CompareComponent } from './compare/compare.component';
 import { DirectiveComponent } from './directive/directive.component';
 import { HighlightDirective } from './directive/highlight.directive';
+import { PipesComponent } from './component/pipes/pipes.component';
+import { AgePipe } from './pipes/age.pipe';
+import { ParentComponent } from './components/parent/parent.component';
+import { ChildComponent } from './components/child/child.component';
 
 @NgModule({
   declarations: [
@@ -21,12 +25,17 @@ import { HighlightDirective } from './directive/highlight.directive';
     CompareComponent,
     DirectiveComponent,
     HighlightDirective,
+    PipesComponent,
+    AgePipe,
+    ParentComponent,
+    ChildComponent,
+
    
   ],
   imports: [
     BrowserModule,FormsModule
   ],
   providers: [],
-  bootstrap: [DirectiveComponent,BindingComponent,AppComponent,SecondComponent]
+  bootstrap: [ParentComponent,PipesComponent]
 })
 export class AppModule { }

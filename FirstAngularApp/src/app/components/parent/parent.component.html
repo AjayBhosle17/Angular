@@ -1,0 +1,17 @@
+<div >
+    Parent Component
+    
+    <p> Parent Data: {{parentData}}</p>
+
+    <input type="text" [(ngModel)]="parentData"/>
+
+    <!-- <input type="text" [(ngModel)]="receiveChildData($event)"/> -->
+
+    <app-child [receiveData]="parentData"
+     (sendData)="receiveChildData($event)"></app-child>
+
+    <p>Child Data access in Parent: {{childData}} </p>
+
+    
+</div>
+ 
