@@ -1,0 +1,26 @@
+
+
+<ng-content select=".Heading"></ng-content>
+
+<table border="1">
+    <thead>
+
+        <tr #tableHeading>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        <tr *ngFor="let product of receiveProduct">
+
+            <td>{{product.Id}}</td>
+            <td>{{product.Name}}</td>
+            <td>{{product.Price}}</td>
+        </tr>
+        
+    </tbody>
+</table>
+
+<ng-content select =".Footer"></ng-content>

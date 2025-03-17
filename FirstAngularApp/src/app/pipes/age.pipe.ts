@@ -10,7 +10,7 @@ export class AgePipe implements PipeTransform {
     let current = new Date();
     let val = new Date(value as string);
 
-    return current.getFullYear()- val.getFullYear();
+    return (Number)(current.getFullYear()- val.getFullYear());
   }
 
 }

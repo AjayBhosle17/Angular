@@ -14,6 +14,8 @@ import { PipesComponent } from './component/pipes/pipes.component';
 import { AgePipe } from './pipes/age.pipe';
 import { ParentComponent } from './components/parent/parent.component';
 import { ChildComponent } from './components/child/child.component';
+import { HomeComponent } from './components/home/home.component';
+import { ProductsComponent } from './components/products/products.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,8 @@ import { ChildComponent } from './components/child/child.component';
     AgePipe,
     ParentComponent,
     ChildComponent,
+    HomeComponent,
+    ProductsComponent,
 
    
   ],
@@ -36,6 +40,6 @@ import { ChildComponent } from './components/child/child.component';
     BrowserModule,FormsModule
   ],
   providers: [],
-  bootstrap: [ParentComponent,PipesComponent]
+  bootstrap: [HomeComponent]
 })
 export class AppModule { }

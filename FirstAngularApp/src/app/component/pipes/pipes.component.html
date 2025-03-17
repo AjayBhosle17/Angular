@@ -19,7 +19,7 @@
     <tbody>
 
         <tr *ngFor="let item of users">
-            <td>{{item.name | uppercase }} </td>
+            <td>{{item.name | uppercase | slice:0:2 }} </td>
             <td>{{item.city | lowercase}}</td>
             <!-- <td>{{item.salary | currency}}</td> -->
              <!-- <td>{{item.salary | number}}</td> -->
@@ -35,5 +35,5 @@
 </table>
 
 <pre>
-    {{users}}
+    {{users|json}}
 </pre>
