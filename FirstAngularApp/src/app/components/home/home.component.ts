@@ -57,4 +57,5 @@ export class HomeComponent  {
     // //   this.projectedHead.nativeElement.setAttribute('style','background-color:black')
     // // }
 
+    
 }

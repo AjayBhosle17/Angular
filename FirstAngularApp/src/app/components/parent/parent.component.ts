@@ -1,5 +1,6 @@
 import { style } from '@angular/animations';
 import { AfterViewInit, Component,ElementRef,Output, QueryList, ViewChild, ViewChildren } from '@angular/core';
+import { ChildComponent } from '../child/child.component';
 
 @Component({
   selector: 'app-parent',
@@ -34,9 +35,17 @@ export class ParentComponent implements AfterViewInit {
   @ViewChildren('para')
   para?:any;
 
+  @ViewChild('child')
+  child?:any;
+  
+
   ngAfterViewInit(): void {
     console.log(this.demo);
     this.demo?.nativeElement.setAttribute('style','color:red;');
+
+    console.log(this.child);
+    this.child?.nativeElement.setAttribute('style','color:pink');
+
 
     console.log(this.para);
     this.para?.first.nativeElement.setAttribute('style','color:blue');
