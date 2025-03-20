@@ -3,10 +3,11 @@
 </div>
 
 
-<table style="margin-top: 20px; background-color: chocolate;" border="1">
+<table class="table">
     <thead>
 
         <tr>
+            <th>Id</th>
             <th>Name</th>
             <th>City</th>
             <th>Salary</th>
@@ -19,7 +20,9 @@
     <tbody>
 
         <tr *ngFor="let item of users">
-            <td>{{item.name | uppercase | slice:0:2 }} </td>
+            <td>{{item.id}}</td>
+            <td><a [routerLink]="['/user',item.id]" >{{item.name | uppercase }}</a> </td>
+
             <td>{{item.city | lowercase}}</td>
             <!-- <td>{{item.salary | currency}}</td> -->
              <!-- <td>{{item.salary | number}}</td> -->
@@ -33,6 +36,7 @@
 
     </tbody>
 </table>
+
 
 <pre>
     {{users|json}}

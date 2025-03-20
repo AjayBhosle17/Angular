@@ -9,6 +9,7 @@ export class PipesComponent {
 
   users=[
   {
+    id:1,
 
     name:'Ajay',
     salary:23000,
@@ -17,6 +18,7 @@ export class PipesComponent {
     speciality:'software Developer'
   },
   {
+    id:2,
 
     name:'Vijay',
     salary:32000,
@@ -25,6 +27,7 @@ export class PipesComponent {
     speciality:'software Developer'
   } ,
    {
+    id:3,
 
     name:'shital',
     salary:87000,
@@ -34,6 +37,7 @@ export class PipesComponent {
   },
   {
 
+    id:4,
     name:'Snehal',
     salary:3400,
     city:'pune',

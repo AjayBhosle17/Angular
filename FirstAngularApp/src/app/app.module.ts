@@ -19,16 +19,8 @@ import { ProductsComponent } from './components/products/products.component';
 import { RoutingComponent } from './routing/routing.component';
 import {RouterModule, Routes } from '@angular/router';
 import { UserDetailsComponent } from './user-details/user-details.component';
+import { AppRoutingModule } from './app-routing/app-routing.module';
 
-let routes:Routes=[
-  // {path:'',component:HomeComponent},
-  {path:'',redirectTo:'home',pathMatch:'full'},
-  {path:'bind',component:BindingComponent},
-  {path:'pipe',component:PipesComponent},
-  {path:'home',component:HomeComponent},
-  {path:'**',component:BindingComponent}
- 
-]
 
 
 
@@ -55,7 +47,9 @@ let routes:Routes=[
   ],
   imports: [
     BrowserModule,FormsModule,
-    RouterModule.forRoot(routes)
+    AppRoutingModule,
+    RouterModule
+    
   ],
   providers: [],
   bootstrap: [RoutingComponent]
