@@ -1,0 +1,24 @@
+<p style="text-align: center; color: red; font-size: 20px;">Student Component!</p>
+
+<table class="container table">
+    <thead>
+
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>UserName</th>
+            <th>Email</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of student">
+            <td>{{item.id}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.username}}</td>
+            <td>{{item.email}}</td>
+
+        </tr>
+
+    </tbody>
+</table>

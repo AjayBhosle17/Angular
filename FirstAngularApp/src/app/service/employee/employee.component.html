@@ -1,0 +1,36 @@
+
+<h3 style="text-align: center;">Add New User</h3> 
+<div  style="text-align: center; margin-bottom: 30px;" >
+     <input type="text" placeholder="Enter Id"class="me-2" #id >
+     <input type="text" placeholder="Enter Name" class="me-2" #name>
+     <input type="text" placeholder="Enter UserName" class="me-2" #username>
+     <input type="text" placeholder="Enter Email" class="me-2" #email>
+
+     <br>
+     <input type="button" value="Add User" (click)="addUser(id.value,name.value,username.value,email.value)">
+</div>
+
+<p style="text-align: center; color: red; font-size: 20px;">Employee Component!</p>
+
+<table class=" container table">
+    <thead>
+
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>UserName</th>
+            <th>Email</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of employee">
+            <td>{{item.id}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.username}}</td>
+            <td>{{item.email}}</td>
+
+        </tr>
+
+    </tbody>
+</table>

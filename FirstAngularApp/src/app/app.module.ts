@@ -20,6 +20,11 @@ import { RoutingComponent } from './routing/routing.component';
 import {RouterModule, Routes } from '@angular/router';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { AppRoutingModule } from './app-routing/app-routing.module';
+import { ElectronicsComponent } from './component/electronics/electronics.component';
+import { MobilesComponent } from './component/mobiles/mobiles.component';
+import { LaptopsComponent } from './component/laptops/laptops.component';
+import { EmployeeComponent } from './service/employee/employee.component';
+import { StudentComponent } from './service/student/student.component';
 
 
 
@@ -42,13 +47,18 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
     ProductsComponent,
     RoutingComponent,
     UserDetailsComponent,
+    ElectronicsComponent,
+    MobilesComponent,
+    LaptopsComponent,
+    EmployeeComponent,
+    StudentComponent,
 
    
   ],
   imports: [
     BrowserModule,FormsModule,
     AppRoutingModule,
-    RouterModule
+   // RouterModule
     
   ],
   providers: [],
