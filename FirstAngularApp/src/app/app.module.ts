@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import {HttpClientModule} from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { FirstComponent } from './first/first.component';
 import { SecondComponent } from './second/second.component';
@@ -25,6 +25,8 @@ import { MobilesComponent } from './component/mobiles/mobiles.component';
 import { LaptopsComponent } from './component/laptops/laptops.component';
 import { EmployeeComponent } from './service/employee/employee.component';
 import { StudentComponent } from './service/student/student.component';
+import { ApiFetchComponent } from './api-fetch/api-fetch.component';
+import { CartModule } from './cart/cart.module';
 
 
 
@@ -52,16 +54,23 @@ import { StudentComponent } from './service/student/student.component';
     LaptopsComponent,
     EmployeeComponent,
     StudentComponent,
+    ApiFetchComponent,
 
    
   ],
   imports: [
     BrowserModule,FormsModule,
     AppRoutingModule,
+    HttpClientModule
    // RouterModule
-    
+    // ,CartModule
   ],
   providers: [],
   bootstrap: [RoutingComponent]
 })
-export class AppModule { }
+export class AppModule { 
+
+  constructor(){
+    console.log('App Module is Loaded');
+  }
+}

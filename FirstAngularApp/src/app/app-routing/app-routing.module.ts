@@ -10,6 +10,8 @@ import { MobilesComponent } from '../component/mobiles/mobiles.component';
 import { LaptopsComponent } from '../component/laptops/laptops.component';
 import { EmployeeComponent } from '../service/employee/employee.component';
 import { StudentComponent } from '../service/student/student.component';
+import { ApiFetchComponent } from '../api-fetch/api-fetch.component';
+import { CartComponent } from '../cart/cart/cart.component';
 
 
 
@@ -27,8 +29,12 @@ let routes:Routes=[
       {path:'laptops',component:LaptopsComponent}
     ]
   },
+  {path:'ApiFetch',component:ApiFetchComponent},
   {path:'Employee',component:EmployeeComponent},
   {path:'Student',component:StudentComponent},
+  { path: 'cart', component:CartComponent,
+    loadChildren: () => import('../cart/cart.module').then(m => m.CartModule) },
+
   {path:'**',component:BindingComponent},
   
 

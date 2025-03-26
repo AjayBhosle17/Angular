@@ -9,6 +9,7 @@ import { UserService } from 'src/app/services/user.service';
 export class EmployeeComponent {
 
   employee:any;
+  message:string="Data Load Successfully";
 
   constructor(private userservice:UserService){
     // this.employee=[
@@ -18,8 +19,15 @@ export class EmployeeComponent {
 
     // ]
 
-    this.employee=userservice.getUsers();
+    //this.employee=userservice.getUsers();
 
+    userservice.getUsers().subscribe(data=>{
+
+      this.employee=data;
+    },error=>{
+
+      this.message="Error To Loading Data";
+    });
 
 
   }

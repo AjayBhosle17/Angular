@@ -1,0 +1,71 @@
+<p>api-fetch works!</p>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+</head>
+<body style="text-align: center;">
+    
+
+    <h1>Api Fetch</h1>
+    
+    <table border="">
+
+        <thead>
+            
+           <tr>
+
+            <th>ID</th>
+            <th>Name</th>
+            <th>Rating</th>
+           </tr>
+
+        </thead>
+        <tbody>
+
+            <tr>
+
+            </tr>
+        </tbody>
+    </table>
+    
+    <script>
+        $(function(){
+            $.ajax({
+                url: 'https://localhost:7243/api/Category',
+                type: 'GET',
+                contentType: 'application/json',
+                dataType: 'json',
+                success: function(response){
+                    alert('API Fetch Success');
+                    console.log(response);
+    
+                  
+                    var tableBody = $("tbody");
+                    tableBody.empty(); 
+                    response.forEach(item => {
+                        tableBody.append(`
+                            <tr>
+                                <td>${item.id}</td>
+                                <td>${item.name}</td>
+                                <td>${item.rating}</td>
+                            </tr>
+                        `);
+                    });
+                },
+                error: function(error){
+                    alert('API Fetch Failed');
+                    console.log(error);
+                }
+            });
+        });
+    </script>
+    
+</body>
+</html>

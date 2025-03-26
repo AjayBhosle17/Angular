@@ -10,6 +10,8 @@
      <input type="button" value="Add User" (click)="addUser(id.value,name.value,username.value,email.value)">
 </div>
 
+<div *ngIf="employee;else empty ">
+    
 <p style="text-align: center; color: red; font-size: 20px;">Employee Component!</p>
 
 <table class=" container table">
@@ -34,3 +36,11 @@
 
     </tbody>
 </table>
+</div>
+<ng-template #empty>
+    <div class="bg-info p-5">
+
+        <h2>{{message}}</h2>
+    </div>
+</ng-template>
+
