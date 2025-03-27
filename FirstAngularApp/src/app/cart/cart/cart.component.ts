@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class CartComponent {
 
+  someProperty:string | undefined='red';
+
+  username:string='red'
+  user:any={
+    name:this.username,
+    city:'Pune'
+  }
 }

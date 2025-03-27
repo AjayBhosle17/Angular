@@ -27,6 +27,8 @@ import { EmployeeComponent } from './service/employee/employee.component';
 import { StudentComponent } from './service/student/student.component';
 import { ApiFetchComponent } from './api-fetch/api-fetch.component';
 import { CartModule } from './cart/cart.module';
+import { RegisterComponent } from './Form/register/register.component';
+import { LoginComponent } from './Form/login/login.component';
 
 
 
@@ -55,9 +57,9 @@ import { CartModule } from './cart/cart.module';
     EmployeeComponent,
     StudentComponent,
     ApiFetchComponent,
-
-   
-  ],
+    RegisterComponent,
+    LoginComponent
+    ],
   imports: [
     BrowserModule,FormsModule,
     AppRoutingModule,

@@ -1,3 +1,11 @@
 <p>cart works!</p>
 
-<app-cart-items></app-cart-items>
+Enter Something <input type="text" [(ngModel)]="someProperty">
+Name : <input type="text" [(ngModel)]="username">
+
+<p>{{username}}</p>
+<app-cart-items [parentData]="someProperty"
+[UserData]="user">
+<h2 #parentHeading>Parent Heading Data</h2>
+</app-cart-items>
+ 
