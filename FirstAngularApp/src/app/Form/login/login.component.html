@@ -1,20 +1,51 @@
-
 <h2>Login</h2>
 <form #myform="ngForm" (ngSubmit)="formData(myform.value)">
     <div class="col-4">
         <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Name</label>
-            <input type="text" class="form-control" name="username" ngModel>
-          </div>
-          <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Password</label>
-            <input type="text" class="form-control" name="password" ngModel />
-          </div>
-    </div>
- 
-    <button type="submit" class="btn btn-primary">Submit</button>
-  </form>
+            <label class="form-label">Name</label>
+            <input type="text" #user="ngModel" class="form-control" name="username" ngModel required minlength="2"/>
+            <span class="text-danger" *ngIf="user.touched && user.errors?.['required']">Plz Enter Name</span>
+            <span class="text-danger" *ngIf="user.touched && user.errors?.['minlength']">Enter at least 2 characters</span>
+        </div>
 
-  <div>
-    {{myform.value |json}}    
-  </div>
+        <div class="mb-3">
+            <label class="form-label">Password</label>
+            <input type="text" #Pass="ngModel" class="form-control" name="password" ngModel required 
+            pattern="^(?=.*[a-z])(?=.*[A-Z])[a-zA-Z]+[0-9]{3}$"/>
+            <span class="text-danger" *ngIf="Pass.touched && Pass.errors?.['required']">Enter password</span>
+            <span class="text-danger" *ngIf="Pass.touched && Pass.errors?.['pattern']">
+                Password must contain at least one uppercase letter, one lowercase letter, and exactly 3 digits.
+            </span>
+        </div>
+
+        <div class="mb-3" ngModelGroup="address">
+          <h3>Address</h3>
+
+          <label class="form-label">Landmark</label>
+          <input type="text" #landmark="ngModel" class="form-control" name="landmark" ngModel required/>
+          <span class="text-danger" *ngIf="landmark.touched && landmark.errors?.['required']">Please enter landmark</span>
+<br>
+          <label class="form-label">Village</label>
+          <input type="text" #village="ngModel" class="form-control" name="village" ngModel required/>
+          <span class="text-danger" *ngIf="village.touched && village.errors?.['required']">Please enter village</span>
+<br>
+          <label class="form-label">City</label>
+          <input type="text" #city="ngModel" class="form-control" name="city" ngModel required/>
+          <span class="text-danger" *ngIf="city.touched && city.errors?.['required']">Please enter city</span>
+      </div>
+    </div>
+
+    <button type="submit" [disabled]="myform.invalid" class="btn btn-primary">Submit</button>
+</form>
+
+<div> 
+    <h1>Form States</h1>
+    <p>touched: {{myform.touched}}</p>
+    <p>untouched: {{myform.untouched}}</p>
+    <p>pristine : {{myform.pristine}}</p>
+    <p>dirty : {{myform.dirty}}</p>
+</div>
+
+<div>
+    {{myform.value | json}}    
+</div>
