@@ -1,0 +1,36 @@
+<div class="container mt-4">
+    <div class="d-flex justify-content-center align-items-center">
+        <div class="col-5 text-center border p-4">
+            <h2>Category Management</h2>
+  
+   
+            <input [(ngModel)]="newCategory.name" class="form-control mb-2" placeholder="Enter Category Name">
+            <input [(ngModel)]="newCategory.rating"  class="form-control mb-2" placeholder="Enter Rating (1-5)" min="1" max="5" />
+            
+            <button class="btn btn-success" (click)="addCategory()">
+            {{ isEditing ? 'Update' : 'Add' }} Category </button>
+       </div>
+
+ </div>
+   
+  
+    <table class="table table-bordered mt-3">
+      <tr>
+        <th>ID</th>
+        <th>Category Name</th>
+        <th>Rating</th>
+        <th>Actions</th>
+      </tr>
+      <tr *ngFor="let category of categories; let i = index" 
+          [style.background]="i % 2 === 0 ? 'lightblue' : 'white'">
+        <td>{{ category.id }}</td>
+        <td>{{ category.name }}</td>
+        <td>{{ category.rating }} ⭐</td>
+        <td >
+          <button class="btn btn-primary btn-sm me-2" (click)="editCategory(i)">Edit</button>
+          <button class="btn btn-danger btn-sm" (click)="deleteCategory(i)">Delete</button>
+        </td>
+      </tr>
+    </table>
+  </div>
+  
