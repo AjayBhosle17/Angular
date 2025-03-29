@@ -1,1 +1,62 @@
-<p>register works!</p>
+<div class="container mt-4">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card shadow-lg">
+          <div class="card-header bg-primary text-white text-center">
+            <h3>Register</h3>
+          </div>
+          <div class="card-body">
+            <form [formGroup]="studentForm" (ngSubmit)="onSubmit()">
+              <div class="mb-3">
+                <label class="form-label">First Name:</label>
+                <input type="text" class="form-control" formControlName="firstname">
+                <div class="text-danger small" *ngIf="studentForm.get('firstname')?.invalid && studentForm.get('firstname')?.touched">
+                  First Name is required (min 3 characters).
+                </div>
+              </div>
+  
+              <div class="mb-3">
+                <label class="form-label">Last Name:</label>
+                <input type="text" class="form-control" formControlName="lastname">
+                <div class="text-danger small" *ngIf="studentForm.get('lastname')?.invalid && studentForm.get('lastname')?.touched">
+                  Last Name is required (min 3 characters).
+                </div>
+              </div>
+  
+              <div class="mb-3">
+                <label class="form-label">Email:</label>
+                <input type="email" class="form-control" formControlName="email">
+                <div class="text-danger small" *ngIf="studentForm.get('email')?.invalid && studentForm.get('email')?.touched">
+                  Enter a valid email.
+                </div>
+              </div>
+  
+              <div class="mb-3">
+                <label class="form-label">Password:</label>
+                <input type="password" class="form-control" formControlName="password">
+                <div class="text-danger small" *ngIf="studentForm.get('password')?.invalid && studentForm.get('password')?.touched">
+                  Password must be at least 6 characters.
+                </div>
+              </div>
+  
+              <div class="mb-3">
+                <label class="form-label">Confirm Password:</label>
+                <input type="password" class="form-control" formControlName="confirmPassword">
+                <div class="text-danger small" *ngIf="studentForm.get('confirmPassword')?.invalid && studentForm.get('confirmPassword')?.touched">
+                  Please confirm your password.
+                </div>
+              </div>
+  
+              <div class="d-grid">
+                <button type="submit" class="btn btn-primary" [disabled]="studentForm.invalid">Register</button>
+                <button type="button" class="btn btn-secondary mt-2" (click)="resetForm()">Reset</button>
+          
+                <button type="button" class="btn btn-secondary mt-2" (click)="Load()">Load</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

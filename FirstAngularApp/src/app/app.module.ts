@@ -6,7 +6,7 @@ import { FirstComponent } from './first/first.component';
 import { SecondComponent } from './second/second.component';
 import { ThirdComponent } from './third/third.component';
 import { BindingComponent } from './binding/binding.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CompareComponent } from './compare/compare.component';
 import { DirectiveComponent } from './directive/directive.component';
 import { HighlightDirective } from './directive/highlight.directive';
@@ -63,7 +63,8 @@ import { LoginComponent } from './Form/login/login.component';
   imports: [
     BrowserModule,FormsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
    // RouterModule
     // ,CartModule
   ],

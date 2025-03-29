@@ -33,8 +33,14 @@
           <input type="text" #city="ngModel" class="form-control" name="city" ngModel required/>
           <span class="text-danger" *ngIf="city.touched && city.errors?.['required']">Please enter city</span>
       </div>
+      <div>
+        <input type="email" placeholder="Hello" class="form-control" name="hello" ngModel #dada="ngModel">
+        <br>
+        <span class="text-danger" *ngIf="dada.touched" >Plz Enter Hello</span>
+    </div>
     </div>
 
+   
     <button type="submit" [disabled]="myform.invalid" class="btn btn-primary">Submit</button>
 </form>
 
